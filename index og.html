@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>для одного конкретного жопика💌</title>
+<style>
+  body {
+    background-color: #ffd6e0;
+    font-family: 'Press Start 2P', cursive;
+    color: #ff5c8d;
+    text-align: center;
+    padding: 40px;
+    background-image: url('https://i.imgur.com/6x8aG8N.png'); /* пиксельные сердечки */
+    background-repeat: repeat;
+    overflow-x: hidden;
+  }
+  .decor-left, .decor-right {
+    position: fixed;
+    top: 0;
+    width: 120px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    pointer-events: none;
+  }
+  .decor-left { left: 0; }
+  .decor-right { right: 0; }
+  .decor-left img, .decor-right img {
+    width: 80px;
+    image-rendering: pixelated;
+  }
+  .envelope {
+    background: #fff0f5;
+    border: 3px solid #ff9bb3;
+    border-radius: 16px;
+    padding: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #ff99b9;
+    position: relative;
+    z-index: 2;
+  }
+  h1 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  .kittens {
+    margin-top: 20px;
+  }
+  .kittens img {
+    width: 100px;
+    image-rendering: pixelated;
+  }
+  button {
+    background-color: #ff99b9;
+    border: none;
+    color: white;
+    font-size: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  button:hover {
+    background-color: #ffb6c1;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <audio id="bg-music" src="The Marías Sienna.mp3" loop></audio>
+
+  <div class="decor-left">
+    <img src="https://i.imgur.com/AgZ1E0A.png" alt="cat">
+    <img src="https://i.imgur.com/Ll9e3Zz.png" alt="heart">
+    <img src="https://i.imgur.com/YjA9szv.png" alt="cloud">
+    <img src="https://i.imgur.com/jI4RkoP.png" alt="cat">
+  </div>
+
+  <div class="decor-right">
+    <img src="https://i.imgur.com/YjA9szv.png" alt="cloud">
+    <img src="https://i.imgur.com/AgZ1E0A.png" alt="cat">
+    <img src="https://i.imgur.com/Ll9e3Zz.png" alt="heart">
+    <img src="https://i.imgur.com/jI4RkoP.png" alt="cat">
+  </div>
+
+  <button onclick="toggleMusic()">💗включить музыку</button>
+
+  <div class="envelope">
+    <h1>💌письмо для рауашкинса💌</h1>
+    <p>котик!
+если ты это читаешь значит я все-таки чето придумала хихи
+я очень скучаю по тебе и думаю, что это заметно 😞
+мне не хватает твоих объятий, наших прогулок, возможности дурачиться с тобой, дразнить тебя, целоваться с тобой, даже по своим собственным капризам около тебя я скучаю
+мне нужно быть взрослой, ответственной и разумной 24/7, и только с тобой я могу по-настоящему расслабиться
+я очень на тебя злюсь, потому что ты не рядом
+мне грустно и одиноко, ведь мы давно не виделись, и у меня даже больше нет возможности прийти к тебе на работу и увидеть тебя
+я грущу потому что не могу позаботиться о тебе и не могу ощутить твою заботу в полной мере когда мы только переписываемся
+мне вообще не нравится с тобой переписываться! звонки раза в два лучше но и они ерунда полная👎
+ничто не заменит личные встречи емае
+хочу к тебе или чтобы ты пришел ко мне в общем без разницы просто хочу чтобы ы были вместе поскорее
+люблю тебя
+знаю что и ты меня любишь но пока ты там где-то без меня тебе бы лучше культивировать это чувство и копить ульту чтобы меня обнять потом десять тысяч раз иначе я обижусь😡</p>
+    <div class="kittens">
+      <img src="https://i.imgur.com/AgZ1E0A.png" alt="kitten">
+      <img src="https://i.imgur.com/jI4RkoP.png" alt="kitten">
+      <img src="https://i.imgur.com/AgZ1E0A.png" alt="kitten">
+    </div>
+  </div>
+
+<script>
+function toggleMusic() {
+  const music = document.getElementById('bg-music');
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
+</script>
+
+</body>
+</html>
