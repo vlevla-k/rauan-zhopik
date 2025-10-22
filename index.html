@@ -5,16 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>для одного конкретного жопика💌</title>
 <style>
-  body {
-    background-color: #ffd6e0;
-    font-family: 'Press Start 2P', cursive;
-    color: #ff5c8d;
-    text-align: center;
-    padding: 40px;
-    background-image: url('https://i.imgur.com/6x8aG8N.png'); /* пиксельные сердечки */
-    background-repeat: repeat;
-    overflow-x: hidden;
-  }
+ body {
+  background-color: #a0d8f8; /* нежно-голубой фон */
+  background-image: url('hearts.png'); /* фон с розовыми сердечками */
+  background-repeat: repeat;
+  background-size: 200px 200px; /* подгони под размер сердечек */
+  image-rendering: pixelated;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Левая колонка с котятами */
+.left-column {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background-image: url('kittens.png');
+  background-repeat: repeat-y;
+  background-size: 80px auto;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Правая колонка с облачками */
+.right-column {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background-image: url('clouds.png');
+  background-repeat: repeat-y;
+  background-size: 80px auto;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Контейнер с письмом */
+.letter-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+  font-family: 'Courier New', monospace;
+  z-index: 2;
+  position: relative;
+}
   .decor-left, .decor-right {
     position: fixed;
     top: 0;
@@ -72,6 +114,22 @@
   button:hover {
     background-color: #ffb6c1;
   }
+  .hearts-line {
+  text-align: center;
+  font-size: 26px;
+  color: #ff6fb7;
+  margin-top: 20px;
+  animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -94,8 +152,10 @@
   </div>
 
   <button onclick="toggleMusic()">💗включить музыку</button>
+<div class="left-column"></div>
+<div class="right-column"></div>
 
-  <div class="envelope">
+<div class="letter-container">
     <h1>💌письмо для рауашкинса💌</h1>
     <p>котик!
 если ты это читаешь значит я все-таки чето придумала хихи
@@ -110,11 +170,7 @@
 хочу к тебе или чтобы ты пришел ко мне в общем без разницы просто хочу чтобы ы были вместе поскорее
 люблю тебя
 знаю что и ты меня любишь но пока ты там где-то без меня тебе бы лучше культивировать это чувство и копить ульту чтобы меня обнять потом десять тысяч раз иначе я обижусь😡</p>
-    <div class="kittens">
-      <img src="https://i.imgur.com/AgZ1E0A.png" alt="kitten">
-      <img src="https://i.imgur.com/jI4RkoP.png" alt="kitten">
-      <img src="https://i.imgur.com/AgZ1E0A.png" alt="kitten">
-    </div>
+ <div class="hearts-line">💗💗💗💗💗</div>
   </div>
 
 <script>
@@ -130,3 +186,4 @@ function toggleMusic() {
 
 </body>
 </html>
+
