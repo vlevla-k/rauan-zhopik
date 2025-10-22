@@ -44,7 +44,8 @@
   pointer-events: none;
   z-index: 1;
 }
-
+  <audio id="bg-music" src="The Marías Sienna.mp3" loop></audio>
+  <button onclick="toggleMusic()">💗включить музыку</button>
 /* Контейнер с письмом */
 .letter-container {
   max-width: 600px;
@@ -135,23 +136,11 @@
 </head>
 <body>
 
-  <audio id="bg-music" src="The Marías Sienna.mp3" loop></audio>
 
-  <div class="decor-left">
-    <img src="https://i.imgur.com/AgZ1E0A.png" alt="cat">
-    <img src="https://i.imgur.com/Ll9e3Zz.png" alt="heart">
-    <img src="https://i.imgur.com/YjA9szv.png" alt="cloud">
-    <img src="https://i.imgur.com/jI4RkoP.png" alt="cat">
+
   </div>
 
-  <div class="decor-right">
-    <img src="https://i.imgur.com/YjA9szv.png" alt="cloud">
-    <img src="https://i.imgur.com/AgZ1E0A.png" alt="cat">
-    <img src="https://i.imgur.com/Ll9e3Zz.png" alt="heart">
-    <img src="https://i.imgur.com/jI4RkoP.png" alt="cat">
-  </div>
-
-  <button onclick="toggleMusic()">💗включить музыку</button>
+ 
 <div class="left-column"></div>
 <div class="right-column"></div>
 
@@ -186,4 +175,5 @@ function toggleMusic() {
 
 </body>
 </html>
+
 
